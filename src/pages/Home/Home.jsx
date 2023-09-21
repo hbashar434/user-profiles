@@ -3,7 +3,7 @@ import UserData from "../UserData/UserData";
 
 const Home = () => {
   return (
-    <div className=" bg-slate-200">
+    <div className="">
       <UserData />
     </div>
   );

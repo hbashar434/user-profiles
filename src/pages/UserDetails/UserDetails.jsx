@@ -17,7 +17,7 @@ const UserDetails = () => {
   } = data || {};
 
   return (
-    <div className="bg-white rounded-lg p-16 my-12 md:my-24 ">
+    <div className="bg-white dark:bg-slate-800 rounded-lg p-16 my-12 md:my-24 ">
       <div className="flex items-center mb-4">
         <img
           src={image}
@@ -25,14 +25,14 @@ const UserDetails = () => {
           className="rounded-full h-16 w-16 object-cover mr-4"
         />
         <div>
-          <h2 className="text-xl font-semibold">{name}</h2>
-          <p className="text-gray-500">{email}</p>
+          <h2 className="text-xl font-semibold dark:text-white">{name}</h2>
+          <p className="text-gray-500 dark:text-gray-200">{email}</p>
         </div>
       </div>
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <h3 className="text-lg font-semibold">Personal Info</h3>
-          <ul className="text-gray-500">
+          <h3 className="text-lg font-semibold dark:text-white">Personal Info</h3>
+          <ul className="text-gray-500 dark:text-gray-200">
             <li>
               <strong>Age:</strong> {age}
             </li>
@@ -48,8 +48,8 @@ const UserDetails = () => {
           </ul>
         </div>
         <div>
-          <h3 className="text-lg font-semibold">Additional Info</h3>
-          <ul className="text-gray-500">
+          <h3 className="text-lg font-semibold dark:text-white">Additional Info</h3>
+          <ul className="text-gray-500 dark:text-gray-200">
             <li>
               <strong>Hobbies:</strong> {hobbies.join(", ")}
             </li>
@@ -60,8 +60,8 @@ const UserDetails = () => {
         </div>
       </div>
       <div className="mt-4">
-        <h3 className="text-lg font-semibold">About Me</h3>
-        <p className="text-gray-500">{about}</p>
+        <h3 className="text-lg font-semibold dark:text-white">About Me</h3>
+        <p className="text-gray-500 dark:text-gray-200">{about}</p>
       </div>
     </div>
   );

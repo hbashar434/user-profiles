@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/wesoftin.png";
+import ThemeToggler from "../../utils/ThemeToggler";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -10,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-blue-500 p-4">
+    <nav className="bg-blue-500 dark:bg-slate-700 p-4">
       <div className="container mx-auto">
         <div className="flex justify-between items-center">
           <Link to="/">
@@ -29,6 +30,7 @@ const Navbar = () => {
             <Link to="/" className="text-white hover:text-gray-300">
               Contact Us
             </Link>
+            <ThemeToggler />
           </div>
           <div className="md:hidden flex items-center">
             <button
@@ -59,6 +61,9 @@ const Navbar = () => {
                 )}
               </svg>
             </button>
+            <div className="pl-2 flex justify-center items-center ">
+              <ThemeToggler />
+            </div>
           </div>
         </div>
         {isMobileMenuOpen && (
