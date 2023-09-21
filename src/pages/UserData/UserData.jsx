@@ -13,7 +13,7 @@ const UserData = () => {
         Meet Our Client
       </h1>
       {data && Array.isArray(data) && data.length > 0 ? (
-        <div className="grid justify-center gap-4 md:grid-cols-3">
+        <div className="grid justify-center gap-4 md:grid-cols-3 lg:grid-cols-2">
           {data.map((user) => (
             <UserCard key={user._id} user={user} />
           ))}
